@@ -42,7 +42,7 @@ const Game = {
     
       reset: function() {
         this.background = new Background(this.ctx, this.width, this.height);
-        this.player = new Player(this.ctx, 50, 150, 'images/gastly.png', this.width,this.height, this.playerKeys);
+        this.player = new Player(this.ctx, 100, 100, this.width,this.height, this.playerKeys);
         // this.obstacles = [];
         // ScoreBoard.init(this.ctx, this.score)
       },
