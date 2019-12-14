@@ -8,7 +8,10 @@ const Game = {
     framesCounter: 0,
     playerKeys: {
       TOP_KEY: 38,
-      SPACE: 32
+      BOTTOM_KEY: 40,
+      RIGHT_KEY: 39,
+      LEFT_KEY: 37,
+      SPACE: 32,
     },
     score: 0,
 

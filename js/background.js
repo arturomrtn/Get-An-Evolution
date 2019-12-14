@@ -18,9 +18,9 @@ class Background {
         // this.ctx.drawImage(this.image, this.posX + this.width, this.posY, this.width, this.height)
       }
     
-      move() {
-        this.posX -= this.vx;
+      //move() {
+        //this.posX -= this.vx;
     
-        if(this.posX <= -this.width) this.posX = 0;
-      }
+        //if(this.posX <= -this.width) this.posX = 0;
+      //}
     }
