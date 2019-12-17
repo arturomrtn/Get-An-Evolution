@@ -29,17 +29,7 @@ class Enemy {
     }
 
     draw() { 
-        this.ctx.drawImage(
-            this.image, 
-            this.sx,
-            this.sy,
-            this.sWidth,
-            this.sHeight,
-            this.dx,
-            this.dy,
-            this.dWidth,
-            this.dHeight,
-        );
+        this.ctx.drawImage(this.image, this.sx,this.sy,this.sWidth,this.sHeight,this.dx,this.dy, this.dWidth, this.dHeight);
         
     }
 };

@@ -28,19 +28,19 @@ class Player {
         this.orientation = "S";
         this.movement = false;
 
-        //this.bullets = [];
+        this.bullets = [];
         this.setListeners()
     }
 
     draw() {
         this.ctx.drawImage(this.image, this.posX, this.posY, this.width, this.height)
-        //this.framesIndex * Math.floor(this.image.width / this.frames),
-        //0,
-        //Math.floor(this.image.width / this.frames),
+        this.framesIndex * Math.floor(this.image.width / this.frames),
+            0,
+            Math.floor(this.image.width / this.frames),
 
-        //this.clearBullets()
-        //this.bullets.forEach(bullet => bullet.draw())
-        //this.animate(framesCounter)
+            this.clearBullets()
+        this.bullets.forEach(bullet => bullet.draw())
+        this.animate(framesCounter)
     }
 
     setListeners() {
@@ -49,9 +49,9 @@ class Player {
                 case this.keys.TOP_KEY:
                     this.posY -= 10;
                     break;
-                //case this.keys.SPACE:
-                //this.shoot();
-                //break;
+                case this.keys.SPACE:
+                    this.shoot();
+                    break;
                 case this.keys.BOTTOM_KEY:
                     this.posY += 10;
                     break;
@@ -64,4 +64,12 @@ class Player {
             }
         })
     }
+
+shoot() {
+    this.bullets.push(new Bullet(this.ctx, 10, this.posX, this.posY, this.width, this.height, this.posY0))
+}
+
+clearBullets() {
+    this.bullets = this.bullets.filter(bullet => bullet.posX <= this.gameWidth)
+}
 }
