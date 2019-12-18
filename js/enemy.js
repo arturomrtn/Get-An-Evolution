@@ -1,35 +1,23 @@
 class Enemy {
-
-    constructor(ctx, dx, dy, direction){
-
+    constructor(ctx, image, startPositionX, startPositionY, width, height) {
         this.ctx = ctx;
-  
         this.image = new Image();
-        this.image.src = 'images/cubone.png';
-        
-        this.sx = 0;
-        this.sy = 200;
-
-        this.sxPos = [0, 200, 400, 600, 780];
-        this.framesCounter = 0;
-
-        this.sWidth = 170;
-        this.sHeight = 170;
-
-        this.dWidth = 100;
-        this.dHeight = 100,
-
-        this.dx = dx;
-        this.dy = dy;
-
-        this.selector;
-
-        this.direction = direction;
-
+        this.image.src = image;
+        this.startPositionX = startPositionX;
+        this.startPositionY = startPositionY;
+        this.posX = startPositionX;
+        this.posY = startPositionY;
+        this.width = width;
+        this.height = height;
+        this.vX = 1;
     }
 
-    draw() { 
-        this.ctx.drawImage(this.image, this.sx,this.sy,this.sWidth,this.sHeight,this.dx,this.dy, this.dWidth, this.dHeight);
-        
+    draw() {
+        this.ctx.drawImage(this.image, this.posX, this.posY, this.width, this.height);
     }
-};
+
+    move() {
+        this.posX -= this.vX
+        if(Math.abs(this.startPositionX - this.posX) > 60) this.vX *= -1;
+    }
+}
