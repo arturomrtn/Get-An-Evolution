@@ -14,6 +14,7 @@ const Game = {
         SPACE: 32,
     },
     score: 0,
+    level: 1,
 
     init: function () {
         this.canvas = document.getElementById('canvas');
@@ -36,7 +37,9 @@ const Game = {
             this.clearEnemy();
 
             this.generateEnemy();
+            this.generateEnemyTwo();
             this.generateArrive();
+            //this.generateArriveTwo();
             if (this.isCollision(this.cubone)) this.gameOver();
         }, 1000 / this.fps)
     },
@@ -46,7 +49,7 @@ const Game = {
         this.player = new Player(this.ctx, 'images/gastly.png', 120, 120, 50, 50, this.playerKeys);
         this.cubone = [];
         this.arrives = [];
-        //this.marowak = [];
+        this.marowak = [];
     },
 
     clear: function () {
@@ -59,8 +62,12 @@ const Game = {
         this.cubone.forEach(elem => elem.draw());
     },
 
+    drawMarowak: function () {
+        this.marowak.forEach(elemm => elemm.draw());
+    },
+
     moveAll: function () {
-        this.cubone.forEach(elem => elem.move())
+        this.cubone.forEach(elem => elem.move());
     },
 
     generateEnemy: function () {
@@ -70,21 +77,39 @@ const Game = {
     },
 
     generateEnemyTwo: function () {
-        if (this.cubone.length <= 0) {
-            this.cubone.push(new Enemy(this.ctx, 'images/marowak.png', 800, 500, 50, 50));
+        if (this.marowak.length <= 0) {
+            this.marowak.push(new EnemyTwo(this.ctx, 'images/marowak.png', 100, 280, 50, 50))
         }
     },
+
 
     generateArrive: function() {
         this.arrives = [new Arrive(this.ctx, 1100, 230, 20, 20)];
         if(this.isCollision(this.arrives)) {
-            console.log('winner')
+            console.log("winner");
             this.background = new Background(this.ctx, 'images/torrepokemon.png', this.width, this.height);
             this.player = new Player(this.ctx, 'images/haunter.png', 580, 660, 50, 50, this.playerKeys);
-            this.cubone = new Enemy(this.ctx, 'images/marowak.png', 800, 500, 50, 50);
+            this.cubone = new Enemy(this.ctx, 'images/gengar.png', 700, 400, 50, 50);
+            this.marowak = new EnemyTwo(this.ctx, 'images/marowak.png', 600, 500, 50, 50 );
+            this.generateArriveTwo();
+            //this.generateEnemyTwo();
+            //this.drawMarowak();
 
             this.clear();
-            //this.clearEnemy();
+            this.clearEnemy();
+        }
+    },
+
+    generateArriveTwo: function() {
+        this.arrives = [new Arrive(this.ctx, 700, 100, 20, 20)];
+        if(this.isCollision(this.arrives)) {
+            console.log("winner");
+            this.player = new Player(this.ctx, 'images/gengar.png', 400, 800, 50, 50, this.playerKeys);
+            //this.generateEnemyTwo();
+            //this.drawMarowak();
+
+            this.clear();
+            this.clearEnemy();
         }
     },
 

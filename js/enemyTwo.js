@@ -1,4 +1,4 @@
-class Enemy {
+class EnemyTwo {
     constructor(ctx, image, startPositionX, startPositionY, width, height) {
         this.ctx = ctx;
         this.image = new Image();
@@ -16,9 +16,9 @@ class Enemy {
     draw() {
         this.ctx.drawImage(this.image, this.posX, this.posY, this.width, this.height);
     }
-
-    move() {
-        this.posX -= this.vX
-        if(Math.abs(this.startPositionX - this.posX) > 60) this.vX *= -1;
+    moveSecondEnemy() {
+        this.posY -= this.vY
+        if(Math.abs(this.startPositionY - this.posY) > 60) this.vY *= -1;
     }
 }
+
