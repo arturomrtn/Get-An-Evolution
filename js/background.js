@@ -1,11 +1,11 @@
 class Background {
-    constructor(ctx, width, height) {
+    constructor(ctx, image, width, height) {
       this.ctx = ctx;
       this.width = width;
       this.height = height;
   
       this.image = new Image();
-      this.image.src = 'images/pueblolavanda.png';
+      this.image.src = image;
   
       this.posX = 0;
       this.posY = 0;
