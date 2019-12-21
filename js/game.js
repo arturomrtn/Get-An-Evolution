@@ -46,7 +46,7 @@ const Game = {
 
     reset: function () {
         this.background = new Background(this.ctx, 'images/pueblolavanda.png', this.width, this.height);
-        this.player = new Player(this.ctx, 'images/gastly.png', 120, 120, 50, 50, this.playerKeys);
+        this.player = new Player(this.ctx, 'images/gastly.png', 750, 650, 50, 50, this.playerKeys);
         this.cubone = [];
         this.arrives = [];
         this.marowak = [];
@@ -90,7 +90,7 @@ const Game = {
             this.background = new Background(this.ctx, 'images/torrepokemon.png', this.width, this.height);
             this.player = new Player(this.ctx, 'images/haunter.png', 580, 660, 50, 50, this.playerKeys);
             this.cubone = new Enemy(this.ctx, 'images/gengar.png', 700, 400, 50, 50);
-            this.marowak = new EnemyTwo(this.ctx, 'images/marowak.png', 600, 500, 50, 50 );
+            this.marowak = new EnemyTwo(this.ctx, 'images/marowak.png', 600, 500, 50, 50);
             this.generateArriveTwo();
             //this.generateEnemyTwo();
             //this.drawMarowak();
