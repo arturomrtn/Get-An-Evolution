@@ -124,7 +124,7 @@ const Game = {
     },
 
     gameOver: function () {
-        this.ctx.font = "bold 40px Arial";
+        this.ctx.font = "bold 32px Arial";
         this.ctx.fillStyle = "dark";
         this.ctx.fillText("Game Over!", (canvas.width / 2) - 17, (canvas.height / 2) + 8);
     },
