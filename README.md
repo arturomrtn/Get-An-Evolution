@@ -1,14 +1,13 @@
 -Get an Evolution-
 
-1. El juego está claramente inspirado en el clásico Pokémon del año 1996. El escenario principal donde transcurrirá la acción es Pueblo Lavanda, caracterizado por ser hogar de un cementerio. La principal diferencia con el juego antiguo es el uso de una de estas criaturas en vez de un entrenador para avanzar.
+1. The game is clearly inspired by the 1996 Pokémon classic. The main difference from the previous game is the use of a Pokémon instead of a trainer to advance.
 
-2. El objetivo principal es llegar a la Torre Pokémon con éxito mientras manejamos a un Gastly. Éste deberá sortear a Cubone, el enemigo de la entrada de la Torre, sin que se genere colisión alguna.
+2. The main objective is to successfully reach the Pokémon Tower while controlling a Gastly. The Pokémon must avoid Cubone, the enemy at the Tower entrance, without causing any collisions.
 
-3. Una vez Gastly logre el acceso a la Torre éste evolucionará en Haunter, a raíz de la experiencia ganada en la batalla previa.
+3. Once Gastly gains access to the Tower, it will evolve into Haunter, thanks to the experience gained in the previous battle.
 
-4. El segundo objetivo del juego tras llegar a la Torre es vencer a Marowak, y conseguir así que Haunter alcance su última evolución, Gengar. Llegando así el final del juego.
+4. The second objective of the game after reaching the Tower is to defeat Marowak, thus enabling Haunter to reach its final evolution, Gengar. This marks the end of the game.
 
-(Actualmente se encuentra en una versión beta de lo que será).
 
 
 

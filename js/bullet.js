@@ -19,7 +19,7 @@ class Bullet {
     draw() {
       this.ctx.beginPath();
       this.ctx.drawImage(this.image, this.posX, this.posY)
-      //this.ctx.fillStyle = 'red'
+      this.ctx.fillStyle = 'red'
       this.ctx.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2)
       this.ctx.fill()
       this.ctx.closePath();
